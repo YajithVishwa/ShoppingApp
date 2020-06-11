@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:layout_height="match_parent"
+    tools:context=".payment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#eeee"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="200dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Enter the details"
+                android:textAlignment="center"
+                android:textSize="40dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:id="@+id/title"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Card Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/cardname"
+                    android:layout_height="wrap_content"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/spinner1"
+                android:autofillHints="Credit Card"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Card Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/cardnum"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+            android:hint="CVV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/cvv"
+                android:inputType="numberPassword"
+                android:layout_height="wrap_content"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/spinner2"
+                android:autofillHints="Expiry Month"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/spinner3"
+                android:autofillHints="Expiry Year"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:text="Add and Pay"
+                android:id="@+id/button3"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
